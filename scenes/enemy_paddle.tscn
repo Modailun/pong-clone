@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rjtnw"]
 size = Vector2(1, 1)
 
-[node name="EnemyPaddle" type="Area2D"]
+[node name="EnemyPaddle" type="AnimatableBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(4, 78)

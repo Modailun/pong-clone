@@ -1,17 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://bbquqoo8o7i4p"]
+[gd_scene load_steps=4 format=3 uid="uid://bbquqoo8o7i4p"]
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_ka6ft"]
+[ext_resource type="Script" uid="uid://k64i4vtv0d0q" path="res://scripts/enemy_paddle.gd" id="1_rjtnw"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rjtnw"]
-size = Vector2(1, 1)
+[sub_resource type="CanvasTexture" id="CanvasTexture_rjtnw"]
 
-[node name="EnemyPaddle" type="AnimatableBody2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ip5qg"]
+size = Vector2(4, 78)
+
+[node name="EnemyPaddle" type="CharacterBody2D"]
+script = ExtResource("1_rjtnw")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(4, 78)
-texture = SubResource("CanvasTexture_ka6ft")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2.38419e-07, -1.90735e-06)
 scale = Vector2(4, 78)
-shape = SubResource("RectangleShape2D_rjtnw")
+texture = SubResource("CanvasTexture_rjtnw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ip5qg")

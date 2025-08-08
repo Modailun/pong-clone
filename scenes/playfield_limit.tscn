@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcpjkpjeclr46"]
+
+[sub_resource type="GDScript" id="GDScript_qxshn"]
+script/source = "extends Area2D
+
+
+
+func _on_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
+"
+
+[node name="PlayfieldLimit" type="Area2D"]
+script = SubResource("GDScript_qxshn")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

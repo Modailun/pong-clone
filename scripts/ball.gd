@@ -1,9 +1,11 @@
 extends RigidBody2D
 
 var initial_velocity = Vector2(-300, 100)
-var speed = 300.0
+var speed = 400.0
 var should_reset = false
 var initial_position = Vector2(0, -8.0)
+
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 func _ready() -> void:
 	_reset_ball()
@@ -22,3 +24,8 @@ func _reset_ball():
 	print('reset ball')
 	print(speed)
 	should_reset = true
+
+
+
+func _on_body_entered(body: Node) -> void:
+	audio_stream_player_2d.play()

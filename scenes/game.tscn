@@ -22,6 +22,10 @@ normal = Vector2(-1, 0)
 
 [node name="Game" type="Node2D"]
 
+[node name="Polygon2D2" type="Polygon2D" parent="."]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-576, -328, 576, -328, 576, 328, -576, 328)
+
 [node name="GameManager" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("1_iywne")
@@ -76,14 +80,14 @@ position = Vector2(0, -8)
 position = Vector2(-576, -328)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBorder/StaticBody2D"]
-position = Vector2(576, 648)
+position = Vector2(577, 651)
 shape = SubResource("WorldBoundaryShape2D_uwrxv")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="WorldBorder"]
 position = Vector2(-576, -312)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBorder/StaticBody2D2"]
-position = Vector2(576, -8)
+position = Vector2(576, -12)
 shape = SubResource("WorldBoundaryShape2D_yqjtg")
 
 [node name="PlayfieldLimitPlayer1" parent="WorldBorder" instance=ExtResource("4_lbhrr")]

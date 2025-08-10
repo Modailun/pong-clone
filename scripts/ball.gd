@@ -1,6 +1,6 @@
 extends RigidBody2D
 
-var initial_velocity = Vector2(-300, 100)
+var initial_velocity = Vector2(randi_range(-100,-1000), randi_range(-100,100))
 var speed = 400.0
 var should_reset = false
 var initial_position = Vector2(0, -8.0)
@@ -22,6 +22,7 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 
 func _reset_ball():
 	print('reset ball')
+	speed = 400.0
 	print(speed)
 	should_reset = true
 
@@ -29,3 +30,4 @@ func _reset_ball():
 
 func _on_body_entered(body: Node) -> void:
 	audio_stream_player_2d.play()
+	speed*=1.05

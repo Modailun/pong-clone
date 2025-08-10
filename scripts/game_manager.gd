@@ -2,7 +2,7 @@ extends Node
 
 var scorePlayer1 : int = 0
 var scorePlayer2 : int = 0
-var Test : int = 0
+var numberPlayers : int = 0
 
 @onready var score_label_player_1: Label = %ScoreLabelPlayer1
 @onready var score_label_player_2: Label = %ScoreLabelPlayer2
@@ -10,11 +10,11 @@ var Test : int = 0
 @onready var ball: RigidBody2D = %Ball
 
 func _ready() -> void:
-	if Test == 0:
+	if numberPlayers == 0:
 		print("Initialisation")
-	elif Test == 1:
+	elif numberPlayers == 1:
 		print("Singleplayer")
-	elif Test == 2:
+	elif numberPlayers == 2:
 		print("Multiplayer")
 
 func add_point_player1():
@@ -34,5 +34,5 @@ func add_point_player2():
 #func _on_timer_timeout() -> void:
 	#ball._reset_ball()
 
-func set_test(x):
-	Test = x
+func set_numberPlayers(x):
+	numberPlayers = x
